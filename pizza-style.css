@@ -1,0 +1,149 @@
+/* Reset some default styles */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+header {
+    background-color: white;
+    padding: 0 0;
+    text-align: center;
+
+}
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+
+    padding: 0 0;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+.logo img {
+    max-width: 100px; /* Adjust the logo size as needed */
+    vertical-align: middle;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 20px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: #d46c1c;
+    font-size: 18px;
+}
+.menu a:hover{
+    border-bottom: 1px solid red;
+    color:red;
+}
+.logo img {
+    max-height: 40px;
+}
+
+.navbar {
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the main content */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #de6b12;
+    padding-top: 45px;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.drink {
+    padding-left: 90px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.drink-item {
+    padding: 20px;
+
+    margin: 10px 0; /* Add margin to separate the items vertically */
+}
+
+h3 {
+    color: #de6b12;
+    margin: 0;
+    float: left;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.price {
+    color: #de6b12;
+    padding-left: 300px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.item-details p{
+    margin-right: 350px;
+}
+.description {
+    max-width: 350px;
+    margin:  0 auto;
+    text-align: left;
+    /*border: 1px solid black;*/
+
+}.description p {
+     margin: 0;
+ }
+.drink-item .description {
+    width: 100%; /* Adjust the width as needed */
+}
+.addi{
+    padding:0 ;
+
+    margin: 4px 0; /* Add margin to separate the items vertically */
+
+}
+.add {
+
+    text-align: left;
+}
+.priceA{
+    color: #de6b12;
+    padding-left: 300px;
+    margin: -40px 100px;
+
+    font-weight: bold;
+}
