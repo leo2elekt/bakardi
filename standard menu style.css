@@ -57,9 +57,9 @@ footer {
 }
 .buttons a{
     text-decoration: none;
-    padding: 10px 0;
+    padding: 12px 0;
     margin: 0 40px;
-    border: 1px solid #333;
+
     border-radius: 15px;
     font-size: 18px;
     transition: background-color 0.3s, color 0.3s;
@@ -67,7 +67,7 @@ footer {
     color: white;
     display: inline-block;
     width: 190px;
-    height: 50px;
+    height: 45px;
     box-sizing: border-box;
 }
 
