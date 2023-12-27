@@ -49,6 +49,7 @@ footer {
 
 }
 
+
 .buttons {
 
     display: flex;
@@ -105,4 +106,14 @@ footer {
         padding: 10px 20px;
         text-align: center;
     }
+}
+.buttons .new-button {
+    display: inline-block;
+    margin: 10px 10px;
+    padding:10px 10px;
+    background-color: #d46c1c;
+    color: ivory;
+    text-decoration: underline dashed;
+    border-radius: 10px;
+    font-size: 20px;
 }
