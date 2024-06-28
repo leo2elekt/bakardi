@@ -1,10 +1,10 @@
-/* styles.css */
-body{
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
 }
+
 /* Navigation bar styles */
 header {
     background-color: white;
@@ -15,7 +15,6 @@ header {
 .logo img {
     max-width: 100px; /* Adjust the logo size as needed */
     vertical-align: middle;
-
 }
 
 .menu {
@@ -26,7 +25,6 @@ header {
 .menu li {
     display: inline;
     margin: 0 20px;
-
 }
 
 .menu a {
@@ -34,32 +32,35 @@ header {
     color: #d46c1c;
     font-size: 18px;
 }
-.menu a:hover{
+.menu a:hover {
     border-bottom: 1px solid red;
-    color:red;
+    color: red;
 }
 
-/* Footer button styles */
-/* styles.css */
-
-/* Footer button styles */
+/* Footer styles */
 footer {
-    text-decoration: none;
-    padding-left: 68px;
-    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
 }
-footer>nav{
-    padding-right: 20px;
+
+.footer-section {
+    margin-bottom: 20px;
 }
-u{
+
+u {
     border-bottom: 1px dotted #d46c1c;
     text-decoration: none;
 }
-footer>nav>a{
+
+footer nav {
+    margin-bottom: 20px;
+}
+
+footer nav a {
     text-decoration: none;
     padding: 12px 10px; /* Adjust the vertical padding as needed */
     margin: 10px 0;
-
     border-radius: 10px;
     font-size: 22px;
     transition: background-color 0.3s, color 0.3s;
@@ -69,23 +70,30 @@ footer>nav>a{
     width: 290px; /* Set a fixed width for all buttons */
     height: 50px;
     box-sizing: border-box; /* Include padding in the width */
-}footer>nav>a:hover{
-     background-color: black;
-     color: white;
- }
+}
+
+footer nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+.social-media-links a {
+    margin: 0 10px;
+}
+
 .glavni {
-    padding:5px 10px;
+    padding: 5px 10px;
     margin: 10px 10px;
     display: flex;
     flex-direction: column; /* Display buttons in a column */
     text-align: center;
-    align-items: center/* Center align the button rows */
+    align-items: center; /* Center align the button rows */
 }
-.glavni a{
+
+.glavni a {
     text-decoration: none;
     padding: 12px 10px; /* Adjust the vertical padding as needed */
     margin: 10px 40px;
-
     border-radius: 10px;
     font-size: 24px;
     transition: background-color 0.3s, color 0.3s;
@@ -96,18 +104,19 @@ footer>nav>a{
     height: 50px;
     box-sizing: border-box; /* Include padding in the width */
 }
-.glavni a:hover{
-    background-color: rgba(212, 108, 28, 0.59);
-    color: white;
-}
-.glavni a:active{
+
+.glavni a:hover {
     background-color: rgba(212, 108, 28, 0.59);
     color: white;
 }
 
-@media (max-width: 768px){
-    #logo{
+.glavni a:active {
+    background-color: rgba(212, 108, 28, 0.59);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #logo {
         width: 400px;
     }
-
 }
