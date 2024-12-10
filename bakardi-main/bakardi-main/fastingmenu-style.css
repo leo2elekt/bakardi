@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+header {
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100px; /* Adjust the logo size as needed */
+    vertical-align: middle;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 20px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: #d46c1c;
+    font-size: 18px;
+}
+.menu a:hover{
+    border-bottom: 1px solid red;
+    color:red;
+}
+
+
+.menju {
+    background-color: white;
+    width: 85%;
+    max-width: 800px; /* Increased max-width to accommodate more columns */
+    margin: 20px auto;
+    padding: 28px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-header h2{
+    font-size: 26px;
+    margin: 0;
+    color: #d46c1c;
+    border-bottom:1px solid black;
+
+}
+
+.menu-header p {
+    font-size: 18px;
+    color: #777;
+    margin: 0;
+}
+
+.menu-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-column {
+    flex-basis: 48%; /* Adjust as needed for spacing */
+}
+
+.menu-item {
+    margin-bottom: 20px;
+}
+
+
+.menu-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #d46c1c;
+    border-bottom:1px solid #d46c1c;
+    width: 65%;
+}
+.menu-item h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: lighter;
+}
+
+.menu-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.menu-item ul li {
+    display: block;
+    padding:10px;
+}
+/* Add more styles as needed */
+.menu-item span{
+    font-size: 12px;
+    margin-left: 20px;
+
+}
