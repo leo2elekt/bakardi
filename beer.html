@@ -18,59 +18,78 @@
       <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
     </div>
     <ul class="menu">
-      <li><a href="standard%20menu.html">Standard Menu</a></li>
-      <li><a href="fasting-menu.html">Fasting Menu</a></li>
-      <li><a href="Drinks.html">Drinks</a></li>
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
     </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
+
 
   </nav>
 
 </header>
-
 <div class="menu-container">
-  <h1 class="ovakvo">Beer</h1>
+  <h1 class="ovakvo" data-en="Beer" data-mk="Пиво">Beer</h1>
+
   <div class="menu-item">
-    <span class="drink">Carlsberg </span>
+    <span class="drink" data-en="Carlsberg" data-mk="Карлсберг">Carlsberg</span>
     <span class="price">150 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Corona</span>
+    <span class="drink" data-en="Corona" data-mk="Корона">Corona</span>
     <span class="price">200 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Zlaten Dab (on tap) 0,5 </span>
+    <span class="drink" data-en="Zlaten Dab (on tap) 0.5" data-mk="Златен Даб (точено) 0,5">Zlaten Dab (on tap) 0,5</span>
     <span class="price">100 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Zlaten Dab 0,33/0,5</span>
-    <span class="price">100 den</span>
-  </div>
-    <div class="menu-item">
-    <span class="drink">Zlaten Dab Amber 0,33</span>
+    <span class="drink" data-en="Zlaten Dab 0.33/0.5" data-mk="Златен Даб 0,33/0,5">Zlaten Dab 0,33/0,5</span>
     <span class="price">100 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Tuborg 0,33/0,5</span>
+    <span class="drink" data-en="Tuborg 0.33/0.5" data-mk="Туборг 0,33/0,5">Tuborg 0,33/0,5</span>
     <span class="price">120/150 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Krali Marko 0,5</span>
+    <span class="drink" data-en="Krali Marko 0.5" data-mk="Крали Марко 0,5">Krali Marko 0,5</span>
     <span class="price">90 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Heineken</span>
+    <span class="drink" data-en="Heineken" data-mk="Хајнекен">Heineken</span>
     <span class="price">150 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Peroni</span>
+    <span class="drink" data-en="Peroni" data-mk="Перони">Peroni</span>
     <span class="price">130 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Tuborg 0.0% alcohol</span>
+    <span class="drink" data-en="Tuborg 0.0% alcohol" data-mk="Туборг 0.0% алкохол">Tuborg 0.0% alcohol</span>
     <span class="price">130 den</span>
   </div>
-
-  <!-- Add more menu items here -->
 </div>
+
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
 </body>
 </html>

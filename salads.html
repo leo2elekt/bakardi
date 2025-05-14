@@ -18,83 +18,128 @@
       <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
     </div>
     <ul class="menu">
-      <li><a href="standard%20menu.html">Standard Menu</a></li>
-      <li><a href="fasting-menu.html">Fasting Menu</a></li>
-      <li><a href="Drinks.html">Drinks</a></li>
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
     </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
 
   </nav>
 
 </header>
-
 <div class="menu-container">
-  <h1 class="ovakvo">Salads</h1>
-  <div class="menu-item">
-    <span class="drink">Mixed green salad</span>
-    <span class="price"><u>180 den</u></span>
-  </div>
-  <div class="explain"><p>carrot, beetroot, cabbage,
-    lettuce, tomatoes, cucumbers</p>
-  </div>
-  <div class="menu-item">
-    <span class="drink">"Shopska" salad</span>
+  <h1 class="ovakvo" data-en="Salads" data-mk="Салати">Salads</h1>
 
-    <span class="price"><u>180 den</u></span>
-  </div>
-  <div class="explain"><p>tomatoes, cucumbers, cheese</p>
-  </div>
   <div class="menu-item">
-    <span class="drink">Greek salad</span>
-    <span class="price"><u>200 den</u></span>
+    <span class="drink" data-en="Mixed green salad" data-mk="Мешана зелена салата">Mixed green salad</span>
+    <span class="price" data-en="180 den" data-mk="180 ден"><u>180 den</u></span>
   </div>
-  <div class="explain"><p>tomatoes, cucumbers, cheese,
-    onion, olives, oregano</p>
+  <div class="explain">
+    <p data-en="carrot, beetroot, cabbage, lettuce, tomatoes, cucumbers"
+       data-mk="морков, цвекло, зелка, зелена салата, домати, краставици">
+      carrot, beetroot, cabbage, lettuce, tomatoes, cucumbers
+    </p>
   </div>
 
   <div class="menu-item">
-    <span class="drink">Tuna salad</span>
-    <span class="price"><u>250 den</u></span>
+    <span class="drink" data-en='"Shopska" salad' data-mk="Шопска салата">"Shopska" salad</span>
+    <span class="price" data-en="180 den" data-mk="180 ден"><u>180 den</u></span>
   </div>
-
-  <div class="explain"><p>lettuce, potato, tuna,
-    olives, onion</p>
-  </div>
-
-  <div class="menu-item">
-    <span class="drink">Caesar salad</span>
-    <span class="price"><u>250 den</u></span>
-  </div>
-  <div class="explain"><p>lettuce, tomatoes, croutons,
-    chicken breast, dressing</p>
+  <div class="explain">
+    <p data-en="tomatoes, cucumbers, cheese"
+       data-mk="домати, краставици, сирење">
+      tomatoes, cucumbers, cheese
+    </p>
   </div>
 
   <div class="menu-item">
-    <span class="drink">Macedonian salad</span>
-    <span class="price"><u>250 den</u></span>
+    <span class="drink" data-en="Greek salad" data-mk="Грчка салата">Greek salad</span>
+    <span class="price" data-en="200 den" data-mk="200 ден"><u>200 den</u></span>
   </div>
-
-  <div class="explain"><p>tomatoes, grilled pepper, onion</p>
-  </div>
-
-  <div class="menu-item">
-    <span class="drink">Homemade salad</span>
-    <span class="price"><u>250 den</u></span>
-  </div>
-
-  <div class="explain"><p>tomatoes, fresh pepper, onion,
-    sheep cheese</p>
+  <div class="explain">
+    <p data-en="tomatoes, cucumbers, cheese, onion, olives, oregano"
+       data-mk="домати, краставици, сирење, кромид, маслинки, оригано">
+      tomatoes, cucumbers, cheese, onion, olives, oregano
+    </p>
   </div>
 
   <div class="menu-item">
-    <span class="drink">Tarator</span>
-    <span class="price"><u>170 den</u></span>
+    <span class="drink" data-en="Tuna salad" data-mk="Туна салата">Tuna salad</span>
+    <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="lettuce, potato, tuna, olives, onion"
+       data-mk="зелена салата, компир, туна, маслинки, кромид">
+      lettuce, potato, tuna, olives, onion
+    </p>
   </div>
 
-  <div class="explain"><p>sour cream, cucumbers,
-    garlic, walnut</p>
+  <div class="menu-item">
+    <span class="drink" data-en="Caesar salad" data-mk="Цезар салата">Caesar salad</span>
+    <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="lettuce, tomatoes, croutons, chicken breast, dressing"
+       data-mk="зелена салата, домати, крутони, пилешки стек, дресинг">
+      lettuce, tomatoes, croutons, chicken breast, dressing
+    </p>
   </div>
 
+  <div class="menu-item">
+    <span class="drink" data-en="Macedonian salad" data-mk="Македонска салата">Macedonian salad</span>
+    <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="tomatoes, grilled pepper, onion"
+       data-mk="домати, печена пиперка, кромид">
+      tomatoes, grilled pepper, onion
+    </p>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Homemade salad" data-mk="Домашна салата">Homemade salad</span>
+    <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="tomatoes, fresh pepper, onion, sheep cheese"
+       data-mk="домати, свежа пиперка, кромид, овчо сирење">
+      tomatoes, fresh pepper, onion, sheep cheese
+    </p>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Tarator" data-mk="Таратор">Tarator</span>
+    <span class="price" data-en="170 den" data-mk="170 ден"><u>170 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="sour cream, cucumbers, garlic, walnut"
+       data-mk="павлака, краставици, лук, орев">
+      sour cream, cucumbers, garlic, walnut
+    </p>
+  </div>
 
 </div>
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
 </body>
 </html>

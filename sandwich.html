@@ -9,7 +9,6 @@
 
 
 </head>
-<body>
 
 <header>
   <!-- Navigation bar with restaurant logo -->
@@ -18,161 +17,167 @@
       <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
     </div>
     <ul class="menu">
-      <li><a href="standard%20menu.html">Standard Menu</a></li>
-      <li><a href="fasting-menu.html">Fasting Menu</a></li>
-      <li><a href="Drinks.html">Drinks</a></li>
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
     </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
 
   </nav>
 
 </header>
-
-
-
 <div class="menu-container">
-  <h1 class="ovakvo">Burgers</h1>
-  <div class="menu-item">
-    <span class="drink">Hamburger</span>
-    <span class="price"><u>190 den</u></span>
-  </div>
-  <div class="explain"><p>homemade bread,
-    beef patty, vegetables</p>
-    <p class="description"><b>Sides:</b> French fries</p>
-  </div>
-  <div class="menu-item">
-    <span class="drink">Cheeseburger</span>
+  <h1 class="ovakvo" data-en="Burgers" data-mk="Бургери">Burgers</h1>
 
-    <span class="price"><u>220 den</u></span>
-  </div>
-  <div class="explain"><p>homemade bread, beef patty,
-    vegetables, cheese</p>
-    <p class="description"><b>Sides:</b> French fries</p>
-  </div>
   <div class="menu-item">
-    <span class="drink">Bakardi burger</span>
-
-    <span class="price"><u>250 den</u></span>
+    <span class="drink" data-en="Hamburger" data-mk="Хамбургер">Hamburger</span>
+    <span class="price" data-en="190 den" data-mk="190 ден"><u>190 den</u></span>
   </div>
-  <div class="explain"><p>homemade bread, beef patty,
-    vegetables, bacon, mushrooms, cheese</p>
-    <p class="description"><b>Sides:</b> French fries</p>
+  <div class="explain">
+    <p data-en="homemade bread, beef patty, vegetables" data-mk="домашно лепче, говедска плескавица, зеленчук"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b> </p>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Cheeseburger" data-mk="Чизбургер">Cheeseburger</span>
+    <span class="price" data-en="220 den" data-mk="220 ден"><u>220 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="homemade bread, beef patty, vegetables, cheese" data-mk="домашно лепче, говедска плескавица, зеленчук, кашкавал"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b></p>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Bakardi burger" data-mk="Бакарди бургер">Bakardi burger</span>
+    <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="homemade bread, beef patty, vegetables, bacon, mushrooms, cheese" data-mk="домашно лепче, говедска плескавица, зеленчук, сланина, печурки, кашкавал"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b></p>
   </div>
 </div>
 
 <div class="menu-container">
-  <h1 class="ovakvo">Sandwiches</h1>
-  <div class="menu-item">
-    <span class="drink">Homemade sandwich</span>
-    <span class="price"><u>190 den</u></span>
-  </div>
-  <div class="explain"><p>homemade bread, cured meat,
-    cheese, pickle sauce
-    <p class="description"><b>Sides:</b> French fries</p>
-  </div>
-  <div class="menu-item">
-    <span class="drink">Combined homemade sandwich</span>
+  <h1 class="ovakvo" data-en="Sandwiches" data-mk="Сендвичи">Sandwiches</h1>
 
-    <span class="price"><u>250 den</u></span>
-  </div>
-  <div class="explain"><p>homemade bread, two types of cured meat,
-    cheese, pickle sauce</p>
-    <p class="description"><b>Sides:</b> French fries</p>
-  </div>
   <div class="menu-item">
-    <span class="drink">Club sandwich</span>
-    <span class="price"><u>190 den</u></span>
+    <span class="drink" data-en="Homemade sandwich" data-mk="Домашен сендвич">Homemade sandwich</span>
+    <span class="price" data-en="190 den" data-mk="190 ден"><u>190 den</u></span>
   </div>
-  <div class="explain"><p>cured meat, cheese,
-    vegetables, sauce</p>
-    <p class="description"><b>Sides:</b> French fries</p>
+  <div class="explain">
+    <p data-en="homemade bread, cured meat, cheese, pickle sauce" data-mk="домашно лепче, сувомеснато, кашкавал, сос од кисели краставички"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b> </p>
   </div>
 
   <div class="menu-item">
-    <span class="drink">Chicken sandwich</span>
-    <span class="price"><u>190 den</u></span>
-
+    <span class="drink" data-en="Combined homemade sandwich" data-mk="Комбиниран домашен сендвич">Combined homemade sandwich</span>
+    <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
   </div>
-
-  <div class="explain"><p>homemade bread, chicken breast,
-    sauce, vegetables</p>
-    <p class="description"><b>Sides:</b> French fries</p>
+  <div class="explain">
+    <p data-en="homemade bread, two types of cured meat, cheese, pickle sauce" data-mk="домашно лепче , два вида сушени меса, кашкавал, сос од кисели краставички"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b> </p>
   </div>
 
   <div class="menu-item">
-    <span class="drink">Chicken sandwich with mushrooms and cheese</span>
-    <span class="price"><u>250 den</u></span>
-
+    <span class="drink" data-en="Club sandwich" data-mk="Клуб сендвич">Club sandwich</span>
+    <span class="price" data-en="190 den" data-mk="190 ден"><u>190 den</u></span>
   </div>
-
-  <div class="explain"><p>homemade bread, chicken breast,
-    sauce, vegetables, cheese, mushrooms</p>
-    <p class="description"><b>Sides:</b> French fries</p>
+  <div class="explain">
+    <p data-en="cured meat, cheese, vegetables, sauce" data-mk="сувомеснато, кашкавал, зеленчук, сос"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b> </p>
   </div>
-
 
   <div class="menu-item">
-    <span class="drink">Breaded chicken sandwich </span>
-    <span class="price"><u>250 den</u></span>
-
+    <span class="drink" data-en="Chicken sandwich" data-mk="Сендвич со стек">Chicken sandwich</span>
+    <span class="price" data-en="190 den" data-mk="190 ден"><u>190 den</u></span>
   </div>
-
-  <div class="explain"><p>homemade bread, breaded chicken breast,
-    curry sauce, vegetables</p>
-    <p class="description"><b>Sides:</b> French fries</p>
+  <div class="explain">
+    <p data-en="homemade bread, chicken breast, sauce, vegetables" data-mk="домашно лепче, пилешки стек, сос, зеленчук"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b></p>
   </div>
-
 
   <div class="menu-item">
-    <span class="drink">Breaded chicken sandwich with mushrooms and cheese</span>
-    <span class="price"><u>300 den</u></span>
-
+    <span class="drink" data-en="Chicken sandwich with mushrooms and cheese" data-mk="Појачан сендвич со стек">Chicken sandwich with mushrooms and cheese</span>
+    <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
   </div>
-
-  <div class="explain"><p>homemade bread, breaded chicken breast,
-    curry sauce, vegetables, cheese, mushrooms</p>
-    <p class="description"><b>Sides:</b> French fries</p>
+  <div class="explain">
+    <p data-en="homemade bread, chicken breast, sauce, vegetables, cheese, mushrooms" data-mk="домашно леб, пилешко месо, сос, зеленчук, сирење, печурки"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b> </p>
   </div>
-
 
   <div class="menu-item">
-    <span class="drink">Vegetarian sandwich</span>
-    <span class="price"><u>190 den</u></span>
-
+    <span class="drink" data-en="Breaded chicken sandwich" data-mk="Сендвич со похован стек">Breaded chicken sandwich</span>
+    <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
   </div>
-
-  <div class="explain"><p>homemade bread, cheese,
-    vegetables, mushrooms, olives</p>
-    <p class="description"><b>Sides:</b> French fries</p>
+  <div class="explain">
+    <p data-en="homemade bread, breaded chicken breast, curry sauce, vegetables" data-mk="домашно лепче, похован стек, кари сос, зеленчук"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b></p>
   </div>
-
 
   <div class="menu-item">
-    <span class="drink">Tuna sandwich</span>
-    <span class="price"><u>190 den</u></span>
-
+    <span class="drink" data-en="Breaded chicken sandwich with mushrooms and cheese" data-mk="Појачан сендвич со похован стек">Breaded chicken sandwich with mushrooms and cheese</span>
+    <span class="price" data-en="300 den" data-mk="300 ден"><u>300 den</u></span>
   </div>
-
-  <div class="explain"><p>tuna, vegetables, onion, mushrooms, olives</p>
-    <p class="description"><b>Sides:</b> French fries</p>
+  <div class="explain">
+    <p data-en="homemade bread, breaded chicken breast, curry sauce, vegetables, cheese, mushrooms" data-mk="домашно лепче, похован стек, кари сос, зеленчук, кашкавал, печурки"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b></p>
   </div>
-
 
   <div class="menu-item">
-    <h3>Cured meats:</h3>
+    <span class="drink" data-en="Vegetarian sandwich" data-mk="Вегетаријански сендвич">Vegetarian sandwich</span>
+    <span class="price" data-en="190 den" data-mk="190 ден"><u>190 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="homemade bread, cheese, vegetables, mushrooms, olives" data-mk="домашно лепче, посен кашкавал, зеленчук, печурки, маслинки"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b></p>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Tuna sandwich" data-mk="Сендвич со туна">Tuna sandwich</span>
+    <span class="price" data-en="190 den" data-mk="190 ден"><u>190 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="tuna, vegetables, onion, mushrooms, olives" data-mk="туна, зеленчук, кромид, печурки, маслинки"></p>
+    <p class="description"><b data-en="Sides: French fries" data-mk="Додаток: Помфрит">Sides:</b></p>
+  </div>
+
+  <div class="menu-item">
+    <h3 data-en="Cured meats:" data-mk="Сувомеснати:">Cured meats:</h3>
     <p class="price"></p>
     <div class="meats">
       <p> </p>
-      <p class="explain">-Chicken ham</p>
-      <p class="explain">-Cured chicken breast</p>
-      <p class="explain">-Beef pepperoni</p>
-      <p class="explain">-Cured beef</p>
-      <p class="explain">-Capicola</p>
-      <p class="explain">-Pork pepperoni</p>
-      <p class="explain">-Bacon</p>
-      <p class="explain">-Cured pork meat</p>
+      <p class="explain" data-en="-Chicken ham" data-mk="-Пилешка шунка">-Chicken ham</p>
+      <p class="explain" data-en="-Cured chicken breast" data-mk="-Пилешко филе">-Cured chicken breast</p>
+      <p class="explain" data-en="-Beef pepperoni" data-mk="-Говедски кулен">-Beef pepperoni</p>
+      <p class="explain" data-en="-Cured beef" data-mk="-Говедска печеница">-Cured beef</p>
+      <p class="explain" data-en="-Capicola" data-mk="-Свински врат">-Capicola</p>
+      <p class="explain" data-en="-Pork pepperoni" data-mk="-Свински кулен">-Pork pepperoni</p>
+      <p class="explain" data-en="-Bacon" data-mk="-Сланина">-Bacon</p>
+      <p class="explain" data-en="-Cured pork meat" data-mk="-Свинска печеница">-Cured pork meat</p>
     </div>
   </div>
-
 </div>
-</body>
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
+
 </html>

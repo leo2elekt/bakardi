@@ -17,59 +17,83 @@
       <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
     </div>
     <ul class="menu">
-      <li><a href="standard%20menu.html">Standard Menu</a></li>
-      <li><a href="fasting-menu.html">Fasting Menu</a></li>
-      <li><a href="Drinks.html">Drinks</a></li>
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
     </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
 
   </nav>
 
 </header>
 
-
 <div class="menu-container">
-  <h1 class="ovakvo">Wine</h1>
+  <h1 class="ovakvo" data-en="Wine" data-mk="Вино">Wine</h1>
+
   <div class="menu-item">
-    <span class="drink">Glass of wine 0,25</span>
+    <span class="drink" data-en="Glass of wine 0.25" data-mk="Чаша вино 0,25">Glass of wine 0,25</span>
     <span class="price">100 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Mulled wine</span>
+    <span class="drink" data-en="Mulled wine" data-mk="Греено вино">Mulled wine</span>
     <span class="price">120 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Wine 0,75</span>
-    <span class="price">700 den</span>
+    <span class="drink" data-en="Wine 0.75" data-mk="Вино 0,75">Wine 0,75</span>
+    <span class="price">600 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Tikves wine 0,187</span>
+    <span class="drink" data-en="Tikves wine 0.187" data-mk="Тиквеш вино 0,187">Tikves wine 0,187</span>
     <span class="price">200 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Monteko vranec 0,7</span>
+    <span class="drink" data-en="Monteko Vranec 0.7" data-mk="Монтеко Вранец 0,7">Monteko vranec 0,7</span>
     <span class="price">1200 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Bovin wine 0,75</span>
-    <span class="price">1200 den</span>
+    <span class="drink" data-en="Bovin wine 0.75" data-mk="Бовин вино 0,75">Bovin wine 0,75</span>
+    <span class="price">1000 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Alexandria white/red  0.7</span>
-    <span class="price">700 den</span>
+    <span class="drink" data-en="Alexandria white/red 0.7" data-mk="Александрија бело/црвено 0,7">Alexandria white/red  0.7</span>
+    <span class="price">600 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">T'ga za jug </span>
-    <span class="price">700 den</span>
+    <span class="drink" data-en="T'ga za jug" data-mk="Т’га за југ">T'ga za jug</span>
+    <span class="price">600 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Tikves 0,5</span>
-    <span class="price">220 den</span>
+    <span class="drink" data-en="Tikves 0.5" data-mk="Тиквеш 0,5">Tikves 0,5</span>
+    <span class="price">170 den</span>
   </div>
   <div class="menu-item">
-    <span class="drink">Tikves 1</span>
-    <span class="price">360 den</span>
+    <span class="drink" data-en="Tikves 1" data-mk="Тиквеш 1">Tikves 1</span>
+    <span class="price">300 den</span>
   </div>
-  <!-- Add more menu items here -->
 </div>
+
+
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
 </body>
 </html>

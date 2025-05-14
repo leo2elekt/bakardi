@@ -17,47 +17,61 @@
       <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
     </div>
     <ul class="menu">
-      <li><a href="standard%20menu.html">Standard Menu</a></li>
-      <li><a href="fasting-menu.html">Fasting Menu</a></li>
-      <li><a href="Drinks.html">Drinks</a></li>
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
     </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
 
   </nav>
 
 </header>
-
 <div class="menu-container">
-  <h1 class="ovakvo">Daska</h1>
+  <h1 class="ovakvo" data-en="Daska" data-mk="Даска">Daska</h1>
+
   <div class="menu-item">
-    <span class="drink">Daska with prosciutto and sheep cheese</span>
-    <span class="price"><u>700 den</u></span>
+    <span class="drink" data-en="Daska with prosciutto and sheep cheese" data-mk="Даска со пршута и овчо сирење">Daska with prosciutto and sheep cheese</span>
+    <span class="price" data-en="700 den" data-mk="700 ден"><u>700 den</u></span>
   </div>
-  <div class="explain"><p>100gr prosciutto,
-    150gr sheep cheese</p>
-  </div>
+  <div class="explain"><p data-en="100gr prosciutto, 150gr sheep cheese" data-mk="100гр пршута, 150гр овчо сирење">100gr prosciutto, 150gr sheep cheese</p></div>
+
   <div class="menu-item">
-    <span class="drink">Charcuterie Daska</span>
+    <span class="drink" data-en="Charcuterie Daska" data-mk="Даска">Charcuterie Daska</span>
+    <span class="price" data-en="750 den" data-mk="750 ден"><u>750 den</u></span>
+  </div>
+  <div class="explain"><p data-en="pork/chicken based, a selection of cured meats, cheese, olives, sauce" data-mk="свинско/пилешко, избор на сушени меса, сирење, маслинки, сос">pork/chicken based, a selection of cured meats, cheese, olives, sauce</p></div>
 
-    <span class="price"><u>750 den</u></span>
-  </div>
-  <div class="explain"><p>pork/chicken based,
-    a selection of cured meats,
-    cheese,olives, sauce</p>
-  </div>
   <div class="menu-item">
-    <span class="drink">Premium Daska</span>
-    <span class="price"><u>1500 den</u></span>
+    <span class="drink" data-en="Premium Daska" data-mk="Премиум Даска">Premium Daska</span>
+    <span class="price" data-en="1500 den" data-mk="1500 ден"><u>1500 den</u></span>
   </div>
-  <div class="explain"><p>blue cheese 150gr, sheep cheese,
-    prosciutto 100gr, sauce,
-    yellow sheep cheese 150gr,
-    cured pork/beef meat</p>
-    <p class="description"><b>Note:</b> choose if you want pork or beef</p>
+  <div class="explain"><p data-en="blue cheese 150gr, sheep cheese, prosciutto 100gr, sauce, yellow sheep cheese 150gr, cured pork/beef meat" data-mk="плаво сирење 150гр, овчо сирење, пршута 100гр, сос, овчи кашкавал 150гр, сушено свинско/говедско месо">blue cheese 150gr, sheep cheese, prosciutto 100gr, sauce, yellow sheep cheese 150gr, cured pork/beef meat</p>
+    <p class="description"><b data-en="Note:" data-mk="Напомена:">Note:</b> <span data-en="choose if you want pork or beef" data-mk="изберете дали сакате свинско или говедско">choose if you want pork or beef</span></p>
   </div>
-
-
-
-
 </div>
+
+
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
 </body>
 </html>

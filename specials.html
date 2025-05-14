@@ -18,122 +18,150 @@
       <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
     </div>
     <ul class="menu">
-      <li><a href="standard%20menu.html">Standard Menu</a></li>
-      <li><a href="fasting-menu.html">Fasting Menu</a></li>
-      <li><a href="Drinks.html">Drinks</a></li>
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
     </ul>
-
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
   </nav>
 
 </header>
 
 <div class="menu-container">
-  <h1 class="ovakvo">Specials</h1>
+  <h1 class="ovakvo" data-en="Specials" data-mk="Специјалитети">Specials</h1>
   <div class="border">
 
-    <span class="drink">Roasted pork</span>
-    <span class="specialprice"><u>1400 den</u></span>
+    <div class="menu-item">
+      <span class="drink" data-en="Roasted pork" data-mk="Свинско во фурна">Roasted pork</span>
+      <span class="specialprice" data-en="1400 den" data-mk="1400 ден"><u>1400 den</u></span>
+    </div>
+    <div class="explain">
+      <p data-en="(1kg)" data-mk="(1кг)">(1kg)</p>
+    </div>
 
-  <div class="explain"><p>(1kg)</p>
-  </div>
+    <div class="menu-item">
+      <span class="drink" data-en="Roasted beef" data-mk="Телешко во фурна">Roasted beef</span>
+      <span class="specialprice" data-en="2000 den" data-mk="2000 ден"><u>2000 den</u></span>
+    </div>
+    <div class="explain">
+      <p data-en="(1kg)" data-mk="(1кг)">(1kg)</p>
+    </div>
 
-    <span class="drink">Roasted beef </span>
+    <div class="menu-item">
+      <span class="drink" data-en='"Sharska" burger' data-mk='„Шарска“ плескавица'>"Sharska" burger</span>
+      <span class="specialprice" data-en="330 den" data-mk="330 ден"><u>330 den</u></span>
+    </div>
+    <div class="explain">
+      <p data-en="(300gr)" data-mk="(300гр)">(300gr)</p>
+    </div>
 
-    <span class="specialprice"><u>2000 den</u></span>
-
-  <div class="explain"><p>(1kg)</p>
-  </div>
-
-    <span class="drink">"Sharska" burger </span>
-    <span class="specialprice"><u>330 den</u></span>
-
-  <div class="explain"><p>(300gr)</p>
-  </div>
-
-    <span class="drink">"Sharska" burger </span>
-
-    <span class="specialprice"><u>440 den</u></span>
-
-    <div class="explain"><p>(400gr)</p>
+    <div class="menu-item">
+      <span class="drink" data-en='"Sharska" burger' data-mk='„Шарска“ плескавица'>"Sharska" burger</span>
+      <span class="specialprice" data-en="440 den" data-mk="440 ден"><u>440 den</u></span>
+    </div>
+    <div class="explain">
+      <p data-en="(400gr)" data-mk="(400гр)">(400gr)</p>
     </div>
   </div>
-
-
-  <div class="menu-item">
-    <span class="drink">Chicken breast</span>
-    <span class="price"><u>280 den</u></span>
-
-  </div>
-
-  <div class="explain"><p>(250gr, served with French fries,
-    tomatoes, cucumbers, over a piece of bread)</p>
-  </div>
-
-  <div class="menu-item">
-    <span class="drink">Chicken schnitzel</span>
-    <span class="price"><u>280 den</u></span>
-
-  </div>
-
-  <div class="explain"><p>(250gr, served with French fries,
-    tomatoes, cucumbers, over a piece of bread)</p>
-  </div>
-
-  <div class="menu-item">
-    <span class="drink">Filled chicken breast (300gr)</span>
-    <span class="price"><u>430 den</u></span>
-
-  </div>
-
-  <div class="explain"><p>(cheese, cured meat,
-    mushrooms, potatoes, kaymak,
-    steamed vegetables, served over a piece of bread)</p>
-  </div>
-
-  <div class="menu-item">
-    <span class="drink">Beef muscle in mushroom sauce</span>
-    <span class="price"><u>700 den</u></span>
-
-  </div>
-
-  <div class="explain"><p>(300gr),
-    sides: steamed vegetables, rice, served over a piece of bread</p>
-  </div>
-
-  <div class="menu-item">
-    <span class="drink">Chicken risotto</span>
-    <span class="price"><u>370 den</u></span>
-
-  </div>
-
-  <div class="explain"><p>(100gr rice, 250gr chicken breast,
-    vegetables, mushroom sauce) </p>
-  </div>
-
-  <div class="menu-item">
-    <span class="drink">Vegetarian risotto</span>
-    <span class="price"><u>370 den</u></span>
-
-  </div>
-
-  <div class="explain"><p>(100gr rice, eggplant,
-    zucchini, vegetables, mushroom sauce) </p>
-  </div>
-
-
-  <div class="menu-item">
-    <h3>Extras: </h3>
-    <p class="price"></p>
-    <div class="meats">
-      <p> </p>
-      <p class="explain">-Bacon - 50 den</p>
-      <p class="explain">-White sauce with mushrooms - 90 den</p>
-      <p class="explain">-Brown sauce - 90 den</p>
-      <p class="explain">-Hot curry sauce - 90 den</p>
-      <p class="explain">-BBQ sauce - 120 den</p>
+    <div class="menu-item">
+      <span class="drink" data-en="Chicken breast" data-mk="Порција стек">Chicken breast</span>
+      <span class="price" data-en="280 den" data-mk="280 ден"><u>280 den</u></span>
     </div>
-  </div>
+    <div class="explain">
+      <p data-en="(250gr, served with French fries, tomatoes, cucumbers, over a piece of bread)"
+         data-mk="(250гр, сервирано со помфрит, домати, краставици, над парче лепче)">
+        (250gr, served with French fries, tomatoes, cucumbers, over a piece of bread)
+      </p>
+    </div>
 
+    <div class="menu-item">
+      <span class="drink" data-en="Chicken schnitzel" data-mk="Пилешка шницла">Chicken schnitzel</span>
+      <span class="price" data-en="280 den" data-mk="280 ден"><u>280 den</u></span>
+    </div>
+    <div class="explain">
+      <p data-en="(250gr, served with French fries, tomatoes, cucumbers, over a piece of bread)"
+         data-mk="(250гр, сервирано со помфрит, домати, краставици, над парче лепче)">
+        (250gr, served with French fries, tomatoes, cucumbers, over a piece of bread)
+      </p>
+    </div>
+
+    <div class="menu-item">
+      <span class="drink" data-en="Filled chicken breast (300gr)" data-mk="Полнето пилешко (300гр)">Filled chicken breast (300gr)</span>
+      <span class="price" data-en="430 den" data-mk="430 ден"><u>430 den</u></span>
+    </div>
+    <div class="explain">
+      <p data-en="(cheese, cured meat, mushrooms, potatoes, kaymak, steamed vegetables, served over a piece of bread)"
+         data-mk="(сирење, сувомеснато, печурки, компири, кајмак, динстан зеленчук, сервирано над парче лепче)">
+        (cheese, cured meat, mushrooms, potatoes, kaymak, steamed vegetables, served over a piece of bread)
+      </p>
+    </div>
+
+    <div class="menu-item">
+      <span class="drink" data-en="Beef muscle in mushroom sauce" data-mk="Говедски мускул во сос од печурки">Beef muscle in mushroom sauce</span>
+      <span class="price" data-en="700 den" data-mk="700 ден"><u>700 den</u></span>
+    </div>
+    <div class="explain">
+      <p data-en="(300gr), sides: steamed vegetables, rice, served over a piece of bread"
+         data-mk="(300гр), прилог: динстан зеленчук, ориз, сервирано над парче лепче">
+        (300gr), sides: steamed vegetables, rice, served over a piece of bread
+      </p>
+    </div>
+
+    <div class="menu-item">
+      <span class="drink" data-en="Chicken risotto" data-mk="Рижото со стек">Chicken risotto</span>
+      <span class="price" data-en="370 den" data-mk="370 ден"><u>370 den</u></span>
+    </div>
+    <div class="explain">
+      <p data-en="(100gr rice, 250gr chicken breast, vegetables, mushroom sauce)"
+         data-mk="(100гр ориз, 250гр пилешки стек, зеленчук, сос од печурки)">
+        (100gr rice, 250gr chicken breast, vegetables, mushroom sauce)
+      </p>
+    </div>
+
+    <div class="menu-item">
+      <span class="drink" data-en="Vegetarian risotto" data-mk="Вегетаријанско рижото">Vegetarian risotto</span>
+      <span class="price" data-en="370 den" data-mk="370 ден"><u>370 den</u></span>
+    </div>
+    <div class="explain">
+      <p data-en="(100gr rice, eggplant, zucchini, vegetables, mushroom sauce)"
+         data-mk="(100гр ориз, модар патлиџан, тиквички, зеленчук, сос од печурки)">
+        (100gr rice, eggplant, zucchini, vegetables, mushroom sauce)
+      </p>
+    </div>
+
+    <div class="menu-item">
+      <h3 data-en="Extras:" data-mk="Додатоци:">Extras:</h3>
+      <div class="meats">
+        <p class="explain" data-en="-Bacon - 50 den" data-mk="-Сланина - 50 ден">-Bacon - 50 den</p>
+        <p class="explain" data-en="-White sauce with mushrooms - 90 den" data-mk="-Бел сос со печурки - 90 ден">-White sauce with mushrooms - 90 den</p>
+        <p class="explain" data-en="-Brown sauce - 90 den" data-mk="-Кафеав сос - 90 ден">-Brown sauce - 90 den</p>
+        <p class="explain" data-en="-Hot curry sauce - 90 den" data-mk="-Топол кари сос - 90 ден">-Hot curry sauce - 90 den</p>
+        <p class="explain" data-en="-BBQ sauce - 120 den" data-mk="-Барбекју сос - 120 ден">-BBQ sauce - 120 den</p>
+      </div>
+    </div>
+
+    <script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
 </div>
 </body>
 </html>

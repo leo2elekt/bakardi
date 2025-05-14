@@ -18,77 +18,109 @@
       <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
     </div>
     <ul class="menu">
-      <li><a href="standard%20menu.html">Standard Menu</a></li>
-      <li><a href="fasting-menu.html">Fasting Menu</a></li>
-      <li><a href="Drinks.html">Drinks</a></li>
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
     </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
 
   </nav>
 
 </header>
 
 <div class="menu-container">
-  <h1 class="ovakvo">Starters</h1>
-  <div class="menu-item">
-    <span class="drink">Grilled mushrooms (200gr)</span>
-    <span class="price"><u>220 den</u></span>
-  </div>
-  <div class="explain"><p>champignons</p>
-  </div>
-  <div class="menu-item">
-    <span class="drink">Grilled mushrooms with cheese(200gr)</span>
+  <h1 class="ovakvo" data-en="Starters" data-mk="Предјадења">Starters</h1>
 
-    <span class="price"><u>280 den</u></span>
-  </div>
-  <div class="explain"><p></p>
-  </div>
   <div class="menu-item">
-    <span class="drink">Chicken wings (1kg)</span>
-    <span class="price"><u>900 den</u></span>
+    <span class="drink" data-en="Grilled mushrooms (200gr)" data-mk="Печурки на скара (200гр)">Grilled mushrooms (200gr)</span>
+    <span class="price" data-en="220 den" data-mk="220 ден"><u>220 den</u></span>
   </div>
-  <div class="explain"><p></p>
+  <div class="explain">
+    <p data-en="champignons" data-mk="шампињони">champignons</p>
   </div>
 
   <div class="menu-item">
-    <span class="drink">Chicken breast (1kg) </span>
-    <span class="price"><u>800 den</u></span>
+    <span class="drink" data-en="Grilled mushrooms with cheese(200gr)" data-mk="Печурки на скара со сирење (200гр)">Grilled mushrooms with cheese(200gr)</span>
+    <span class="price" data-en="280 den" data-mk="280 ден"><u>280 den</u></span>
   </div>
-
-  <div class="explain"><p></p>
-  </div>
-
-  <div class="menu-item">
-    <span class="drink">French fries (300gr)</span>
-    <span class="price"><u>120/190 den</u></span>
-  </div>
-  <div class="explain"><p>(without/with cheese)</p>
+  <div class="explain">
+    <p data-en="" data-mk=""></p>
   </div>
 
   <div class="menu-item">
-    <span class="drink">Spiced potatoes (300gr)</span>
-    <span class="price"><u>140/210 den</u></span>
+    <span class="drink" data-en="Chicken wings (1kg)" data-mk="Пилешки крилца (1кг)">Chicken wings (1kg)</span>
+    <span class="price" data-en="900 den" data-mk="900 ден"><u>900 den</u></span>
   </div>
-
-  <div class="explain"><p>(without/with cheese)</p>
-  </div>
-
-  <div class="menu-item">
-    <span class="drink">Crêpe with cured meat</span>
-    <span class="price"><u>140 den</u></span>
-  </div>
-
-  <div class="explain"><p>cured meat, cheese, mushrooms, sour cream</p>
+  <div class="explain">
+    <p data-en="" data-mk=""></p>
   </div>
 
   <div class="menu-item">
-    <span class="drink">Prosciutto (100gr)</span>
-    <span class="price"><u>400 den</u></span>
+    <span class="drink" data-en="Chicken breast (1kg)" data-mk="Пилешки стек (1кг)">Chicken breast (1kg)</span>
+    <span class="price" data-en="800 den" data-mk="800 ден"><u>800 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="" data-mk=""></p>
   </div>
 
-  <div class="explain"><p></p>
+  <div class="menu-item">
+    <span class="drink" data-en="French fries (300gr)" data-mk="Помфрит (300гр)">French fries (300gr)</span>
+    <span class="price" data-en="120/190 den" data-mk="120/190 ден"><u>120/190 den</u></span>
   </div>
+  <div class="explain">
+    <p data-en="(without/with cheese)" data-mk="(без/со сирење)">(without/with cheese)</p>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Spiced potatoes (300gr)" data-mk="Зачинети компири (300гр)">Spiced potatoes (300gr)</span>
+    <span class="price" data-en="140/210 den" data-mk="140/210 ден"><u>140/210 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="(without/with cheese)" data-mk="(без/со сирење)">(without/with cheese)</p>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Crêpe with cured meat" data-mk="Палачинка со сувомеснато">Crêpe with cured meat</span>
+    <span class="price" data-en="140 den" data-mk="140 ден"><u>140 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="cured meat, cheese, mushrooms, sour cream" data-mk="сувомеснато, сирење, печурки, павлака">
+      cured meat, cheese, mushrooms, sour cream
+    </p>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Prosciutto (100gr)" data-mk="Пршута (100гр)">Prosciutto (100gr)</span>
+    <span class="price" data-en="400 den" data-mk="400 ден"><u>400 den</u></span>
+  </div>
+  <div class="explain">
+    <p data-en="" data-mk=""></p>
+  </div>
+
 
 
 </div>
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
 </body>
 </html>
