@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="beverageStyle.css">
+  <title>Drink Bar Menu</title>
+
+
+</head>
+<body>
+<header>
+  <!-- Navigation bar with restaurant logo -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
+    </div>
+    <ul class="menu">
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
+    </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
+
+  </nav>
+
+</header>
+
+
+<div class="menu-container">
+  <h1 class="ovakvo" data-en="Hot Beverages" data-mk="Топли напитоци">Hot Beverages</h1>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Espresso" data-mk="Еспресо">Espresso</span>
+    <span class="price">50 den</span>
+  </div>
+  <div class="menu-item">
+    <span class="drink" data-en="Macchiato" data-mk="Макијато">Machiatto</span>
+    <span class="price">50 den</span>
+  </div>
+  <div class="menu-item">
+    <span class="drink" data-en="Cappuccino" data-mk="Капучино">Cappucino</span>
+    <span class="price">60 den</span>
+  </div>
+  <div class="menu-item">
+    <span class="drink" data-en="Nescafe" data-mk="Нескафе">Nescafe</span>
+    <span class="price">70 den</span>
+  </div>
+  <div class="menu-item">
+    <span class="drink" data-en="Instant Nescafe" data-mk="Инстант Нескафе">Instant Nescafe</span>
+    <span class="price">100 den</span>
+  </div>
+  <div class="menu-item">
+    <span class="drink" data-en="Cocoa" data-mk="Какао">Cocoa</span>
+    <span class="price">70 den</span>
+  </div>
+  <div class="menu-item">
+    <span class="drink" data-en="Tea" data-mk="Чај">Tea</span>
+    <span class="price">50 den</span>
+  </div>
+  <div class="menu-item">
+    <span class="drink" data-en="Extra honey" data-mk="Мед">Extra honey</span>
+    <span class="price">20 den</span>
+  </div>
+  <div class="menu-item">
+    <span class="drink" data-en="Salep" data-mk="Салеп">Salep</span>
+    <span class="price">70 den</span>
+  </div>
+  <div class="menu-item">
+    <span class="drink" data-en="Hot chocolate" data-mk="Топло чоколадо">Hot chocolate</span>
+    <span class="price">70 den</span>
+  </div>
+</div>
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
+</body>
+</html>

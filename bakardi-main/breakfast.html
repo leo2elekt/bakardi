@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles%20basic.css">
+    <title>Drink Bar Menu</title>
+
+
+
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+            <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+            <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
+        </ul>
+        <div class="language-toggle">
+            <button class="translate-button" id="en-btn">EN</button>
+            <button class="translate-button" id="mk-btn">MK</button>
+        </div>
+    </nav>
+
+</header>
+
+<div class="menu-container">
+    <h1 class="ovakvo" data-en="Breakfast" data-mk="Доручек">Breakfast</h1>
+
+    <div class="menu-item">
+        <span class="drink" data-en="Omellete 1" data-mk="Омлет 1">Omellete 1</span>
+        <span class="price" data-en="200 den" data-mk="200 ден"><u>200 den</u></span>
+    </div>
+    <div class="explain">
+        <p data-en="3 eggs, ham, mushrooms, yellow cheese, (sides: tomatoes, cheese, sour cream, bread)"
+           data-mk="3 јајца, шунка, печурки, жолт кашкавал, (прилози: домати, сирење, павлака, леб)">
+            3 eggs, ham, mushrooms, yellow cheese, (sides: tomatoes, cheese, sour cream, bread)
+        </p>
+    </div>
+
+    <div class="menu-item">
+        <span class="drink" data-en="Omelette 2" data-mk="Омлет 2">Omelette 2</span>
+        <span class="price" data-en="230 den" data-mk="230 ден"><u>230 den</u></span>
+    </div>
+    <div class="explain">
+        <p data-en="3 eggs, dried meat by choice, mushrooms, yellow cheese, (sides: tomatoes, cheese, sour cream, bread)"
+           data-mk="3 јајца, суво месо по избор, печурки, жолт кашкавал, (прилози: домати, сирење, павлака, леб)">
+            3 eggs, dried meat by choice, mushrooms, yellow cheese, (sides: tomatoes, cheese, sour cream, bread)
+        </p>
+    </div>
+
+    <div class="menu-item">
+        <span class="drink" data-en="Vegetarian omelette" data-mk="Вегетаријански омлет">Vegetarian omelette</span>
+        <span class="price" data-en="200 den" data-mk="200 ден"><u>200 den</u></span>
+    </div>
+    <div class="explain">
+        <p data-en="3 eggs, onion, peppers, mushrooms, (sides: tomatoes, cheese, sour cream, bread)"
+           data-mk="3 јајца, кромид, пиперки, печурки, (прилози: домати, сирење, павлака, леб)">
+            3 eggs, onion, peppers, mushrooms, (sides: tomatoes, cheese, sour cream, bread)
+        </p>
+    </div>
+
+    <div class="menu-item">
+        <span class="drink" data-en="Combined omelette" data-mk="Комбиниран омлет">Combined omelette</span>
+        <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
+    </div>
+    <div class="explain">
+        <p data-en="two dried meats by choice, mushrooms, yellow cheese, (sides: tomatoes, cheese, sour cream, bread)"
+           data-mk="две суви меса по избор, печурки, жолт кашкавал, (прилози: домати, сирење, павлака, леб)">
+            two dried meats by choice, mushrooms, yellow cheese, (sides: tomatoes, cheese, sour cream, bread)
+        </p>
+    </div>
+
+    <div class="menu-item">
+        <span class="drink" data-en="Bacon and eggs" data-mk="Сланина и јајца">Bacon and eggs</span>
+        <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
+    </div>
+    <div class="explain">
+        <p data-en="3 eggs sunny side up, bacon, cow cheese, sour cream, tomato, bread"
+           data-mk="3 јајца на око, сланина, кравјо сирење, павлака, домат, леб">
+            3 eggs sunny side up, bacon, cow cheese, sour cream, tomato, bread
+        </p>
+    </div>
+
+    <div class="menu-item">
+        <span class="drink" data-en="Mekica" data-mk="Мекица">Mekica</span>
+        <span class="price" data-en="140 den" data-mk="140 ден"><u>140 den</u></span>
+    </div>
+    <div class="explain">
+        <p data-en="(sides: cow cheese, sour cream)"
+           data-mk="(прилози: кравјо сирење, павлака)">
+            (sides: cow cheese, sour cream)
+        </p>
+    </div>
+</div>
+
+
+</div>
+<script>
+    function setLanguage(lang) {
+        localStorage.setItem('preferredLanguage', lang);
+        applyLanguage(lang);
+    }
+
+    function applyLanguage(lang) {
+        document.querySelectorAll('[data-en]').forEach(el => {
+            el.textContent = el.getAttribute(`data-${lang}`);
+        });
+    }
+
+    document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+    // Load preferred language or default to English
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    applyLanguage(savedLang);
+</script>
+</body>
+</html>

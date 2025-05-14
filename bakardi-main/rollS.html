@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="specials%20style.css">
+  <title>Drink Bar Menu</title>
+
+
+
+</head>
+<body>
+
+<header>
+  <!-- Navigation bar with restaurant logo -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
+    </div>
+    <ul class="menu">
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
+    </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
+
+  </nav>
+
+</header>
+<div class="menu-container">
+  <h1 class="ovakvo" data-en="Roll Sandwiches" data-mk="Рол сендвичи">Roll Sandwiches</h1>
+  <div class="border">
+
+    <span class="drink" data-en="Burrito with roasted pork" data-mk="Бурито со свинско печење">Burrito with roasted pork</span>
+    <span class="specialprice" data-en="300 " data-mk="300 "><u>300 den</u></span>
+
+    <div class="explain"><p data-en="A burrito filled with roasted pork, sauce, and vegetables" data-mk="Бурито со свинско печење, сос и зеленчук">A burrito filled with roasted pork, sauce, and vegetables</p></div>
+
+    <span class="drink" data-en="Burrito with roasted beef" data-mk="Бурито со говедско печење">Burrito with roasted beef</span>
+    <span class="specialprice" data-en="350 " data-mk="350 "><u>350 den</u></span>
+
+    <div class="explain"><p data-en="A burrito filled with roasted beef, sauce, and vegetables" data-mk="Бурито со говедско печење, сос и зеленчук">A burrito filled with roasted beef, sauce, and vegetables</p></div>
+
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Chicken roll" data-mk="Чикен рол">Chicken roll</span>
+    <span class="price" data-en="190 den" data-mk="190 ден"><u>190 den</u></span>
+  </div>
+
+  <div class="explain"><p data-en="chicken breast, sauce, vegetables" data-mk="пилешки стек, сос, зеленчук">chicken breast, sauce, vegetables</p></div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Chicken roll with cheese and mushrooms" data-mk="Појачан чикен рол">Chicken roll with cheese and mushrooms</span>
+    <span class="price" data-en="250 den" data-mk="250 ден"><u>250 den</u></span>
+  </div>
+
+  <div class="explain"><p data-en="chicken breast, sauce, vegetables, mushrooms, cheese" data-mk="пилешко филе, сос, зеленчук, печурки, кашкавал">chicken breast, sauce, vegetables, mushrooms, cheese</p></div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Roll sandwich with cured meat" data-mk="Рол сендвич со суво месо">Roll sandwich with cured meat</span>
+    <span class="price" data-en="190 den" data-mk="190 ден"><u>190 den</u></span>
+  </div>
+
+  <div class="explain"><p data-en="cured meat, sauce, vegetables" data-mk="суво месо, сос, зеленчук">cured meat, sauce, vegetables</p></div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Tuna roll" data-mk="Туна рол">Tuna roll</span>
+    <span class="price" data-en="180 den" data-mk="180 ден"><u>180 den</u></span>
+  </div>
+
+  <div class="explain"><p data-en="tuna, vegetables, onion, olives, mushrooms" data-mk="туна, зеленчук, кромид, маслинки, печурки">tuna, vegetables, onion, olives, mushrooms</p></div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Vegetarian roll" data-mk="Вегетарјански рол">Vegetarian roll</span>
+    <span class="price" data-en="190 den" data-mk="190 ден"><u>190 den</u></span>
+  </div>
+
+  <div class="explain"><p data-en="cheese, sauce, vegetables" data-mk="посен кашкавал, сос, зеленчук">cheese, sauce, vegetables</p></div>
+
+  <div class="menu-item">
+    <h3 data-en="Cured meats:" data-mk="Суво месо:">Cured meats:</h3>
+    <p class="price"></p>
+    <div class="meats">
+      <p class="explain" data-en="-Chicken ham" data-mk="-Пилешка шунка">-Chicken ham</p>
+      <p class="explain" data-en="-Cured chicken breast" data-mk="-Пилешко филе">-Cured chicken breast</p>
+      <p class="explain" data-en="-Beef pepperoni" data-mk="-Говедски кулен">-Beef pepperoni</p>
+      <p class="explain" data-en="-Cured beef" data-mk="-Говедска печеница">-Cured beef</p>
+      <p class="explain" data-en="-Capicola" data-mk="-Свински врат">-Capicola</p>
+      <p class="explain" data-en="-Pork pepperoni" data-mk="-Свински кулен">-Pork pepperoni</p>
+      <p class="explain" data-en="-Bacon" data-mk="-Сланина">-Bacon</p>
+      <p class="explain" data-en="-Cured pork meat" data-mk="-Свинска печеница  ">-Cured pork meat</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
+</body>
+</html>

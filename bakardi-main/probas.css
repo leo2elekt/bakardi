@@ -1,0 +1,141 @@
+/* styles.css */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+/* Navigation bar styles */
+header {
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.translate-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #d46c1c, #d46c1c);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.translate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.translate-button:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.logo img {
+    max-width: 100px; /* Adjust the logo size as needed */
+    vertical-align: middle;
+
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 20px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: #d46c1c;
+    font-size: 18px;
+}
+.menu a:hover{
+    border-bottom: 1px solid red;
+    color:red;
+}
+
+/* Footer button styles */
+/* styles.css */
+
+/* Footer button styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+
+.buttons {
+
+    display: flex;
+    flex-direction: column; /* Display buttons in a column */
+    align-items: center; /* Center align the button rows */
+}
+.buttons a{
+    text-decoration: none;
+    padding: 12px 0;
+    margin: 0 40px;
+
+    border-radius: 15px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #d46c1c;
+    color: white;
+    display: inline-block;
+    width: 190px;
+    height: 45px;
+    box-sizing: border-box;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center; /* Center align buttons in each row */
+}
+
+.button-row a {
+    display: inline-block;
+    margin: 10px 10px;
+    padding:10px 10px;
+    background-color: #d46c1c;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.button-row a:hover{
+    background-color: rgba(212, 108, 28, 0.59);
+    color: white;
+}
+.button-row a:active{
+    background-color: rgba(212, 108, 28, 0.59);
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .menu li {
+        margin: 0 20px;
+    }
+
+    .buttons a {
+        margin: 10px 10px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+}
+.buttons .new-button {
+    display: inline-block;
+    margin: 10px 10px;
+    padding:10px 10px;
+    background-color: #d46c1c;
+    color: ivory;
+    text-decoration: underline dashed;
+    border-radius: 10px;
+    font-size: 20px;
+}

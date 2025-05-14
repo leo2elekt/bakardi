@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standard Menu</title>
+  <link rel="stylesheet" href="standard%20menu%20style.css">
+</head>
+<body>
+<header>
+
+  <nav>
+    <div class="logo">
+       <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
+    </div>
+    <ul class="menu">
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
+    </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
+  </nav>
+
+</header>
+
+<main>
+</main>
+
+<footer>
+
+  <div class="buttons">
+    <div class="button-row">
+      <a href="new.html" class="new-button" data-en="New" data-mk="Ново">New</a>
+    </div>
+    <div class="button-row">
+      <a href="breakfast.html" data-en="Breakfast" data-mk="Доручек">Breakfast</a>
+      <a href="salads.html" data-en="Salads" data-mk="Салати">Salads</a>
+    </div>
+    <div class="button-row">
+      <a href="starters.html" data-en="Starters" data-mk="Мезе">Starters</a>
+      <a href="furnarinki.html" data-en="Furnarinka" data-mk="Фурнаринка">Furnarinka</a>
+    </div>
+    <div class="button-row">
+      <a href="pizza.html" data-en="Pizza" data-mk="Пица">Pizza</a>
+      <a href="cheese.html" data-en="Cheese" data-mk="Сирење">Cheese</a>
+    </div>
+    <div class="button-row">
+      <a href="pasta.html" data-en="Pasta" data-mk="Паста">Pasta</a>
+      <a href="panzerotti.html" data-en="Panzerotti" data-mk="Панцероти">Panzerotti</a>
+    </div>
+    <div class="button-row">
+      <a href="specials.html" data-en="Specials" data-mk="Специјалитети">Specials</a>
+      <a href="daska.html" data-en="Daska" data-mk="Даски">Daska</a>
+    </div>
+    <div class="button-row">
+      <a href="sandwich.html" data-en="Sandwiches" data-mk="Сендвичи">Sandwiches</a>
+      <a href="rollS.html" data-en="Roll Sandwiches" data-mk="Рол Сендвичи">Roll Sandwiches</a>
+    </div>
+    <div class="button-row">
+      <a href="extras.html" data-en="Extras" data-mk="Додатоци">Extras</a>
+      <a href="desserts.html" data-en="Desserts" data-mk="Десерти">Desserts</a>
+    </div>
+  </div>
+</footer>
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
+</body>
+</html>

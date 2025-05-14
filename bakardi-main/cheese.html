@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles%20basic.css">
+  <title>Drink Bar Menu</title>
+
+
+
+</head>
+<body>
+<header>
+  <!-- Navigation bar with restaurant logo -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
+    </div>
+    <ul class="menu">
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
+    </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
+
+  </nav>
+
+</header>
+<div class="menu-container">
+  <h1 class="ovakvo" data-en="Cheese" data-mk="Сирење">Cheese</h1>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Cow cheese (150gr)" data-mk="Кравјо сирење (150гр)">Cow cheese (150gr)</span>
+    <span class="price" data-en="200 den" data-mk="200 ден"><u>200 den</u></span>
+  </div>
+  <div class="explain"><p data-en="" data-mk=""></p></div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Sheep cheese (150gr)" data-mk="Овчо сирење (150гр)">Sheep cheese (150gr)</span>
+    <span class="price" data-en="220 den" data-mk="220 ден"><u>220 den</u></span>
+  </div>
+  <div class="explain"><p data-en="" data-mk=""></p></div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Grilled 'bieno' cheese (150gr)" data-mk="Биено сирење на скара (150гр)">Grilled 'bieno' cheese (150gr)</span>
+    <span class="price" data-en="240 den" data-mk="240 ден"><u>240 den</u></span>
+  </div>
+  <div class="explain"><p data-en="" data-mk=""></p></div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Grilled cow cheese with bacon (150gr)" data-mk="Кравјо сирење со сланина на скара (150гр)">Grilled cow cheese with bacon (150gr)</span>
+    <span class="price" data-en="270 den" data-mk="270 ден"><u>270 den</u></span>
+  </div>
+  <div class="explain"><p data-en="" data-mk=""></p></div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Cheese melt (200gr)" data-mk="Топено сирење (200гр)">Cheese melt (200gr)</span>
+    <span class="price" data-en="270 den" data-mk="270 ден"><u>270 den</u></span>
+  </div>
+  <div class="explain"><p data-en="cheese, sauce, yellow cheese, breadsticks" data-mk="сирење, сос, жолто сирење, сусамка">cheese, sauce, yellow cheese, breadsticks</p></div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Cheese melt with cured meat (200gr)" data-mk="Топено сирење со сушено месо (200гр)">Cheese melt with cured meat (200gr)</span>
+    <span class="price" data-en="300 den" data-mk="300 ден"><u>300 den</u></span>
+  </div>
+  <div class="explain"><p data-en="cured meat, mushrooms, breadsticks, sauce" data-mk="сушено месо, печурки, сусамка, сос">cured meat, mushrooms, breadsticks, sauce</p></div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Blue cheese (100gr)" data-mk="Плаво сирење (100гр)">Blue cheese (100gr)</span>
+    <span class="price" data-en="300 den" data-mk="300 ден"><u>300 den</u></span>
+  </div>
+  <div class="explain"><p data-en="side: dried fruit" data-mk="додаток: суво овошје">side: dried fruit</p></div>
+
+</div>
+
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
+</body>
+</html>

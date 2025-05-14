@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles%20basic.css">
+  <title>Drink Bar Menu</title>
+
+
+
+</head>
+<body>
+
+<header>
+  <!-- Navigation bar with restaurant logo -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
+    </div>
+    <ul class="menu">
+      <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+      <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+      <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
+    </ul>
+    <div class="language-toggle">
+      <button class="translate-button" id="en-btn">EN</button>
+      <button class="translate-button" id="mk-btn">MK</button>
+    </div>
+
+  </nav>
+
+</header>
+<div class="menu-container">
+  <h1 class="ovakvo" data-en="Extras" data-mk="Додатоци">Extras</h1>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Bakardi sauce" data-mk="Бакарди сос">Bakardi sauce</span>
+    <span class="price" data-en="50 den" data-mk="50 ден"><u>50 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Cold curry sauce (100 gr)" data-mk="Ладен кари сос (100 гр)">Cold curry sauce (100 gr)</span>
+    <span class="price" data-en="50 den" data-mk="50 ден"><u>50 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Ketchup/mayo (100gr)" data-mk="Кечап/мајонез (100гр)">Ketchup/mayo (100gr)</span>
+    <span class="price" data-en="50 den" data-mk="50 ден"><u>50 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Packet of ketchup and mayo" data-mk="Пакет кечап и мајонез">Packet of ketchup and mayo</span>
+    <span class="price" data-en="30 den" data-mk="30 ден"><u>30 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Mexicana sauce (100gr)" data-mk="Мексикана сос (100гр)">Mexicana sauce (100gr)</span>
+    <span class="price" data-en="50 den" data-mk="50 ден"><u>50 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Boiled egg" data-mk="Варено јајце">Boiled egg</span>
+    <span class="price" data-en="40 den" data-mk="40 ден"><u>40 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Steamed vegetables/broccoli" data-mk="Парени зеленчуци/брокули">Steamed vegetables/broccoli</span>
+    <span class="price" data-en="80 den" data-mk="80 ден"><u>80 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Sour cream (100 gr)" data-mk="Павлака (100гр)">Sour cream (100 gr)</span>
+    <span class="price" data-en="40 den" data-mk="40 ден"><u>40 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Olives" data-mk="Маслинки">Olives</span>
+    <span class="price" data-en="70 den" data-mk="70 ден"><u>70 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Kaymak" data-mk="Кајмак">Kaymak</span>
+    <span class="price" data-en="60 den" data-mk="60 ден"><u>60 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Cheese (50gr)" data-mk="Сирење (50гр)">Cheese (50gr)</span>
+    <span class="price" data-en="70 den" data-mk="70 ден"><u>70 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="French fries (100gr)" data-mk="Помфрит (100гр)">French fries (100gr)</span>
+    <span class="price" data-en="60 den" data-mk="60 ден"><u>60 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Peppers" data-mk="Пиперки">Peppers</span>
+    <span class="price" data-en="40 den" data-mk="40 ден"><u>40 den</u></span>
+  </div>
+
+  <div class="menu-item">
+    <span class="drink" data-en="Yoghurt (0,25L)" data-mk="Јогурт (0,25L)">Yoghurt (0,25L)</span>
+    <span class="price" data-en="60 den" data-mk="60 ден"><u>60 den</u></span>
+  </div>
+
+</div>
+
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+  document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+  // Load preferred language or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  applyLanguage(savedLang);
+</script>
+</body>
+</html>

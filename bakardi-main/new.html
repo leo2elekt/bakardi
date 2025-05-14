@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles%20basic.css">
+    <title>Drink Bar Menu</title>
+
+
+
+</head>
+<body>
+
+<header>
+    <!-- Navigation bar with restaurant logo -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"> <img src="bakardi%20420.png" alt="Restaurant Logo"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a></li>
+            <li><a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a></li>
+            <li><a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a></li>
+        </ul>
+        <div class="language-toggle">
+            <button class="translate-button" id="en-btn">EN</button>
+            <button class="translate-button" id="mk-btn">MK</button>
+        </div>
+    </nav>
+
+</header>
+
+
+
+<div class="menu-container">
+
+    <h1 class="ovakvo" data-en="New" data-mk="Ново">New</h1>
+
+    <div class="menu-item">
+        <span class="drink" data-en="Meatballs in cream sauce" data-mk="Ќофте во крем сос">Meatballs in cream sauce</span>
+        <span class="price" data-en="330 den" data-mk="330 ден"><u>330 den</u></span>
+    </div>
+    <div>
+    </div>
+    <div class="menu-item">
+        <span class="drink" data-en="Stew" data-mk="Чорба">Stew</span>
+        <span class="price" data-en="180 den" data-mk="180 ден"><u>180 den</u></span>
+    </div>
+    <div class="explain"><p></p>
+    </div>
+    <div class="menu-item">
+        <span class="drink" data-en="Risotto with roasted beef" data-mk="Рижото со телешко печење">Risotto with roasted beef</span>
+
+        <span class="price" data-en="500 den" data-mk="500 ден"><u>500 den</u></span>
+    </div>
+    <div class="explain"><p></p>
+    </div>
+    <div class="menu-item">
+        <span class="drink" data-en="Roasted pork in mushroom sauce" data-mk="Свинско печење во сос од печурки">Roasted pork in mushroom sauce</span>
+        <span class="price" data-en="450 den" data-mk="450 ден"><u>450 den</u></span>
+    </div>
+    <div class="explain"><p></p>
+    </div>
+
+    <div class="menu-item">
+        <span class="drink" data-en="Homemade pork sausages" data-mk="Домашни колбаси">Homemade pork sausages</span>
+        <span class="price" data-en="1400 den" data-mk="1400 ден"><u>1400 den</u></span>
+    </div>
+
+    <div class="explain"><p>(1kg)</p>
+    </div>
+
+    <div class="menu-item">
+        <span class="drink" data-en="Homemade beef sausage (Sudzuk)" data-mk="Суџук">Homemade beef sausage (Sudzuk)</span>
+        <span class="price" data-en="1500 den" data-mk="1500 ден"><u>1500 den</u></span>
+    </div>
+    <div class="explain"><p>(1kg)</p>
+    </div>
+
+
+
+
+</div>
+<script>
+    function setLanguage(lang) {
+        localStorage.setItem('preferredLanguage', lang);
+        applyLanguage(lang);
+    }
+
+    function applyLanguage(lang) {
+        document.querySelectorAll('[data-en]').forEach(el => {
+            el.textContent = el.getAttribute(`data-${lang}`);
+        });
+    }
+
+    document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+    // Load preferred language or default to English
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    applyLanguage(savedLang);
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+
+/* Navigation bar styles */
+header {
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.translate-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #d46c1c, #d46c1c);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.translate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.translate-button:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.logo img {
+    max-width: 100px; /* Adjust the logo size as needed */
+    vertical-align: middle;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 20px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: #d46c1c;
+    font-size: 18px;
+}
+.menu a:hover{
+    border-bottom: 1px solid red;
+    color:red;
+}
+
+
+
+.logo img {
+    max-height: 40px;
+}
+/*ona gore e header ova nadolu e menito*/
+
+.ovakvo{
+    color: #d46c1c;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.menu-container {
+    max-width: 350px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding:10px;
+}
+
+.drink {
+    font-weight: bold;
+}
+
+.price {
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        max-width: 90%;
+    }
+}

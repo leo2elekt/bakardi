@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bakardi Menu</title>
+</head>
+<body>
+<header>
+    <div id="logo">
+        <img src="bakardi%20720.png" width="350" height="220" alt="Bakardi">
+        <div class="language-toggle">
+            <button class="translate-button" id="en-btn">EN</button>
+            <button class="translate-button" id="mk-btn">MK</button>
+        </div>
+
+    </div>
+</header>
+<nav class="glavni">
+
+    <a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a>
+    <a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a>
+    <a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a>
+</nav>
+
+<footer>
+    <div class="footer-section">
+        <h3 data-en="Address" data-mk="Адреса"><u>Address</u></h3>
+        <p data-en="Bul. Ilinden br. 18" data-mk="Бул. Илинден бр.18" >Bul. Ilinden br. 18</p>
+        <p data-en="Kicevo, Macedonia, 6250" data-mk="Кичево, Македонија, 6250" >Kicevo, Macedonia, 6250</p>
+    </div>
+    <div class="footer-section">
+        <h3 data-en="Working Hours" data-mk="Работно време"><u>Working Hours</u></h3>
+        <p data-en="Mon - Sat 07-00" data-mk="Пон - Саб 07-00">Mon - Sat 07-00</p>
+        <p data-en="Sun 09-00" data-mk="Нед 09-00">Sun 09-00</p>
+    </div>
+    <div class="footer-section">
+        <h3 data-en="Contact" data-mk="Контакт"><u>Contact</u></h3>
+        <p>076-599-566</p>
+    </div>
+    <nav>
+        <a data-en="Location" data-mk="Локација" href="lokacija.html">Location →</a>
+    </nav>
+    <div class="social-media-links">
+        <a href="https://www.instagram.com/bakardikicevo/" target="_blank"><img src="insta%20vec.avif" width="40px" height="40px" alt="Instagram"></a>
+        <a href="https://www.facebook.com/bakardiofficial" target="_blank"><img src="fb%202.jpg" width="35px" height="35px" alt="Facebook"></a>
+    </div>
+</footer>
+
+
+<script>
+    function setLanguage(lang) {
+        localStorage.setItem('preferredLanguage', lang);
+        applyLanguage(lang);
+    }
+
+    function applyLanguage(lang) {
+        document.querySelectorAll('[data-en]').forEach(el => {
+            el.textContent = el.getAttribute(`data-${lang}`);
+        });
+    }
+
+    document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+
+    // Load preferred language or default to English
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    applyLanguage(savedLang);
+</script>
+
+
+</body>
+</html>
