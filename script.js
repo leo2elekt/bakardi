@@ -1,12 +1,22 @@
-function flipPage() {
-    const page1 = document.querySelector('.page1');
-    const page2 = document.querySelector('.page2');
-
-    if (page1.style.transform === 'rotateY(0deg)') {
-        page1.style.transform = 'rotateY(180deg)';
-        page2.style.transform = 'rotateY(0deg)';
-    } else {
-        page1.style.transform = 'rotateY(0deg)';
-        page2.style.transform = 'rotateY(180deg)';
-    }
+function setLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    applyLanguage(lang);
 }
+
+function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+        const translation = el.getAttribute(`data-${lang}`);
+        if (translation) {
+            el.textContent = translation;
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('en-btn').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('mk-btn').addEventListener('click', () => setLanguage('mk'));
+    document.getElementById('al-btn').addEventListener('click', () => setLanguage('al'));
+
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    applyLanguage(savedLang);
+});
