@@ -4,47 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Bakardi Menu</title>
+
+<!--    <title>Bakardi Menu</title> -->
+
+    <!-- ================== SEO: ENGLISH VERSION ================== -->
+    <meta name="title" content="Bakardi Restaurant Kicevo | Meals, Coffee and a Quick Break">
+    <meta name="description" content="On the road and need a restaurant near me? Bakardi Restaurant Kicevo is an ideal place to stop for tasty food & drinks while travelling between Skopje & Ohrid.">
+    <meta name="keywords" content="restaurant kicevo, restaurant, kicevo, bakardi">
+
+    <!-- ================== SEO: MACEDONIAN VERSION ================== -->
+    <meta name="title" content="Bakardi Restoran Kicevo | Shiroka ponuda za sechij vkus">
+    <meta name="description" content="Na pat Skopje-Ohrid i barate mesto za pauza? Bakardi Restoran Kicevo e idealen izbor za kafe, pijalak ili vkusen obrok. Imame sè, od mekici do toceno pivo.">
+    <meta name="keywords" content="restoran kicevo, restoran, kicevo, bakardi">
+
+    <link rel="icon" type="image/x.icon" href="favicopica.ico">
+
+    <meta property="og:title" content="Bakardi Restaurant Kicevo | Meals, Coffee and a Quick Break">
+    <meta property="og:description" content="A great place to stop for tasty food & drinks while travelling between Skopje & Ohrid.">
+    <meta property="og:image" content="https://bakardi.mk/your-image.jpg"> <!-- replace with real image -->
+    <meta property="og:url" content="https://bakardi.mk">
+    <meta property="og:type" content="restaurant">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Restaurant",
+            "name": "Bakardi",
+            "image": "https://bakardi.mk/",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Bulevar Ilinden 18",
+                "addressLocality": "Kičevo",
+                "postalCode": "6250",
+                "addressCountry": "MK"
+            },
+            "telephone": "+38976599566",
+            "servesCuisine": ["Grill", "Pizza", "Pasta", "Traditional Macedonian Food"],
+            "url": "https://bakardi.mk",
+            "openingHours": "Mo-Su 07:00-00:00"
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Bakardi Restaurant Kicevo",
+            "url": "https://bakardi.mk",
+            "hasPart": [
+                {
+                    "@type": "WebPage",
+                    "name": "Standard Menu",
+                    "url": "https://bakardi.mk/menu"
+                },
+                {
+                    "@type": "WebPage",
+                    "name": "Fasting Menu",
+                    "url": "https://bakardi.mk/fasting-menu"
+                },
+                {
+                    "@type": "WebPage",
+                    "name": "Drinks",
+                    "url": "https://bakardi.mk/drinks"
+                },
+                {
+                    "@type": "WebPage",
+                    "name": "Location",
+                    "url": "https://bakardi.mk/location"
+                }
+            ]
+        }
+    </script>
+
+
 </head>
 <body>
 <header>
     <div id="logo">
         <img src="bakardi%20720.png" width="350" height="220" alt="Bakardi">
         <div class="language-toggle">
-            <button class="translate-button" id="en-btn">EN</button>
-            <button class="translate-button" id="mk-btn">MK</button>
+            <button class="translate-button" id="mk-btn">MKD</button>
+            <button class="translate-button" id="en-btn">ENG</button>
         </div>
 
     </div>
 </header>
 <nav class="glavni">
 
-    <a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Standard Menu</a>
+    <a href="standard%20menu.html" data-en="Standard Menu" data-mk="Стандардно Мени">Стандардно Мени</a>
     <a href="fasting-menu.html" data-en="Fasting Menu" data-mk="Посно Мени">Fasting Menu</a>
-    <a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Drinks</a>
+    <a href="Drinks.html" data-en="Drinks" data-mk="Пијалоци">Пијалоци</a>
 </nav>
 
 <footer>
     <div class="footer-section">
-        <h3 data-en="Address" data-mk="Адреса"><u>Address</u></h3>
-        <p data-en="Bul. Ilinden br. 18" data-mk="Бул. Илинден бр.18" >Bul. Ilinden br. 18</p>
-        <p data-en="Kicevo, Macedonia, 6250" data-mk="Кичево, Македонија, 6250" >Kicevo, Macedonia, 6250</p>
+        <h3 data-en="Address" data-mk="Адреса"><u>Адреса</u></h3>
+        <p data-en="Bul. Ilinden br. 18" data-mk="Бул. Илинден бр.18" >Бул. Илинден бр.18</p>
+        <p data-en="Kicevo, Macedonia, 6250" data-mk="Кичево, Македонија, 6250" >Кичево, Македонија, 6250</p>
     </div>
     <div class="footer-section">
-        <h3 data-en="Working Hours" data-mk="Работно време"><u>Working Hours</u></h3>
-        <p data-en="Mon - Sat 07-00" data-mk="Пон - Саб 07-00">Mon - Sat 07-00</p>
-        <p data-en="Sun 09-00" data-mk="Нед 09-00">Sun 09-00</p>
+        <h3 data-en="Working Hours" data-mk="Работно време"><u>Работно време</u></h3>
+        <p data-en="Mon - Sat 07-00" data-mk="Пон - Саб 07-00">Пон - Саб 07-00</p>
+        <p data-en="Sun 09-00" data-mk="Нед 09-00">Нед 09-00</p>
     </div>
     <div class="footer-section">
-        <h3 data-en="Contact" data-mk="Контакт"><u>Contact</u></h3>
+        <h3 data-en="Contact" data-mk="Контакт"><u>Контакт</u></h3>
         <p>076-599-566</p>
     </div>
     <nav>
-        <a data-en="Location" data-mk="Локација" href="lokacija.html">Location →</a>
+        <a data-en="Location" data-mk="Локација" href="lokacija.html">Локација →</a>
     </nav>
     <div class="social-media-links">
-        <a href="https://www.instagram.com/bakardikicevo/" target="_blank"><img src="insta%20vec.avif" width="40px" height="40px" alt="Instagram"></a>
-        <a href="https://www.facebook.com/bakardiofficial" target="_blank"><img src="fb%202.jpg" width="35px" height="35px" alt="Facebook"></a>
+        <a href="https://www.instagram.com/bakardikicevo/" target="_blank"><img><img
+                src="camera_15047558.png"  height="40" width="40" alt="Facebook"/></a>
+        <a href="https://www.facebook.com/bakardiofficial" target="_blank"><img><img
+                src="social-media_13651151.png" height="40" width="40" alt="Facebook"/></a>
     </div>
 </footer>
 
