@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import os, re, html, shutil
+import os, re, html, shutil, json
+from urllib.parse import quote
 from bs4 import BeautifulSoup
 
 SRC = "/home/claude/orig/bakardi/bakardi-main/bakardi-main"
@@ -54,12 +55,60 @@ IC = {
  "alcohol":svg('<path d="M10 3h4M11 3v3M13 3v3M10.5 6.5 9 9v10a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V9l-1.5-2.5"/><path d="M9 14h6"/>'),
 }
 PHONE="076-599-566"; PHONE2="078-640-222"; IG="https://www.instagram.com/bakardikicevo/"; FB="https://www.facebook.com/bakardiofficial"
+BASE="https://bakardi.mk/"
 
-def head(title, desc=""):
+RESTAURANT_JSONLD = '<script type="application/ld+json">' + json.dumps({
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Bakardi",
+  "alternateName":"Бакарди",
+  "description":"Restaurant and lounge bar in Ki\u010devo on the Skopje\u2013Ohrid road \u2014 pizza, pastrmajlija, grilled dishes, breakfast, coffee and a full bar.",
+  "image":BASE+"assets/og-image.png",
+  "logo":BASE+"assets/bakardi-cream.png",
+  "url":BASE,
+  "telephone":"+38976599566",
+  "servesCuisine":["Macedonian","Balkan","Pizza","Grill"],
+  "priceRange":"$$",
+  "currenciesAccepted":"MKD",
+  "address":{"@type":"PostalAddress","streetAddress":"Bul. Ilinden 18","addressLocality":"Ki\u010devo","postalCode":"6250","addressCountry":"MK"},
+  "geo":{"@type":"GeoCoordinates","latitude":41.50395,"longitude":20.96255},
+  "hasMap":"https://maps.google.com/?q=Lounge+Bar+Bakardi+Ki%C4%8Devo",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"00:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"15:00","closes":"00:00"}
+  ],
+  "acceptsReservations":True,
+  "hasMenu":BASE+"standard%20menu.html",
+  "sameAs":[IG,FB]
+}, ensure_ascii=False) + '</script>'
+
+def head(title, desc, page_file, jsonld=""):
+    url = BASE + quote(page_file)
+    ogimg = BASE + "assets/og-image.png"
     return ('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">'
       '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
-      f'<title>{esc(title)}</title>'+(f'<meta name="description" content="{esc(desc)}">' if desc else '')
-      +'<link rel="icon" href="assets/favicon.ico">'+FONTS+f'<style>{CSS}</style></head>')
+      f'<title>{esc(title)}</title>'
+      f'<meta name="description" content="{esc(desc)}">'
+      f'<link rel="canonical" href="{url}">'
+      '<meta name="robots" content="index, follow">'
+      '<meta name="theme-color" content="#16281D">'
+      '<meta name="geo.region" content="MK"><meta name="geo.placename" content="Ki\u010devo">'
+      # Open Graph
+      '<meta property="og:type" content="website">'
+      '<meta property="og:site_name" content="Bakardi">'
+      f'<meta property="og:title" content="{esc(title)}">'
+      f'<meta property="og:description" content="{esc(desc)}">'
+      f'<meta property="og:url" content="{url}">'
+      f'<meta property="og:image" content="{ogimg}">'
+      '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+      '<meta property="og:locale" content="mk_MK"><meta property="og:locale:alternate" content="en_US">'
+      # Twitter
+      '<meta name="twitter:card" content="summary_large_image">'
+      f'<meta name="twitter:title" content="{esc(title)}">'
+      f'<meta name="twitter:description" content="{esc(desc)}">'
+      f'<meta name="twitter:image" content="{ogimg}">'
+      '<link rel="icon" href="assets/favicon.ico">'
+      + FONTS + f'<style>{CSS}</style>' + jsonld + '</head>')
 
 def header(active=""):
     def L(href,en,mk,key):
@@ -190,22 +239,22 @@ def render_section(sec):
     if suben: h+=f'<p class="sec-sub" data-en="{esc(suben)}" data-mk="{esc(submk)}">{vis(suben)}</p>'
     return f'<div class="menu-section reveal">{h}{render_entries(entries)}</div>'
 
-def menu_page(title_en,title_mk,sections,parent,active,sub_en="",sub_mk=""):
+def menu_page(page_file,desc,title_en,title_mk,sections,parent,active,sub_en="",sub_mk=""):
     ph,pl=parent
     back=f'<a class="back-link" href="{ph}" data-en="{esc(pl[0])}" data-mk="{esc(pl[1])}">{IC["back"]}{pl[0]}</a>'
     sub=f'<p class="sub" data-en="{esc(sub_en)}" data-mk="{esc(sub_mk)}">{vis(sub_en)}</p>' if sub_en else ''
     body=''.join(render_section(s) for s in sections)
-    return (head(f"Bakardi — {title_en}")+'<body>'+header(active)+
+    return (head(f"{title_en} — Bakardi, Ki\u010devo", desc, page_file)+'<body>'+header(active)+
       f'<section class="page-hero"><div class="narrow">{back}<h1 data-en="{esc(title_en)}" data-mk="{esc(title_mk)}">{vis(title_en)}</h1>{sub}</div></section>'
       f'<section class="menu-body"><div class="narrow">{body}</div></section>'+footer()+scripts())
 
-def hub_page(title_en,title_mk,eye_en,eye_mk,active,cats):
+def hub_page(page_file,desc,title_en,title_mk,active,cats):
     cards=''.join(
       f'<a class="cat reveal" href="{href}"><div class="top"><span class="cat-ic">{IC[icon]}</span><span class="arrow">{IC["arrow"]}</span></div>'
       f'<h3 data-en="{esc(en)}" data-mk="{esc(mk)}">{vis(en)}</h3>'
       f'<p data-en="{esc(ten)}" data-mk="{esc(tmk)}">{vis(ten_:=ten)}</p></a>'
       for en,mk,href,icon,ten,tmk in cats)
-    return (head(f"Bakardi — {title_en}")+'<body>'+header(active)+
+    return (head(f"{title_en} — Bakardi, Ki\u010devo", desc, page_file)+'<body>'+header(active)+
       f'<section class="page-hero"><div class="wrap"><a class="back-link" href="index.html" data-en="Home" data-mk="\u041f\u043e\u0447\u0435\u0442\u043d\u0430">{IC["back"]}Home</a>'
       f'<h1 data-en="{esc(title_en)}" data-mk="{esc(title_mk)}">{vis(title_en)}</h1></div></section>'
       f'<section class="hub"><div class="wrap"><div class="cat-grid">{cards}</div></div></section>'+footer()+scripts())
@@ -237,13 +286,16 @@ def home_page():
         f'<div class="socials"><a href="{IG}" aria-label="Instagram" target="_blank" rel="noopener">{IC["instagram"]}</a>'
         f'<a href="{FB}" aria-label="Facebook" target="_blank" rel="noopener">{IC["facebook"]}</a></div>'
       '</div></div></section>')
-    return (head("Bakardi Restaurant Kicevo | Meals, Coffee & Drinks",
-                 "Bakardi Restaurant in Ki\u010devo — tasty food, good coffee and a full bar.")
+    return (head("Bakardi — Restaurant & Lounge Bar in Ki\u010devo",
+                 "Bakardi is a restaurant and lounge bar in Ki\u010devo, on the Skopje\u2013Ohrid road. Pizza, pastrmajlija, grilled dishes, breakfast, coffee and a full bar. Delivery and pick-up.",
+                 "index.html", RESTAURANT_JSONLD)
       +'<body>'+header('')+hero+info+footer()+scripts())
 
 def location_page():
     MAP="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24604.561699648322!2d20.962551217612578!3d41.50395449744132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1351376ecee5f839%3A0x1d46ecf39a0eefcf!2sLounge%20Bar%20Bakardi!5e0!3m2!1sen!2smk!4v1695235475731!5m2!1sen!2smk"
-    return (head("Bakardi — Location")+'<body>'+header('')+
+    return (head("Location — Bakardi, Ki\u010devo",
+                 "Find Bakardi on the Skopje\u2013Ohrid road in Ki\u010devo. Address: Bul. Ilinden 18. Opening hours and phone numbers for delivery and pick-up.",
+                 "lokacija.html")+'<body>'+header('')+
       '<section class="page-hero"><div class="wrap">'
       f'<a class="back-link" href="index.html" data-en="Home" data-mk="\u041f\u043e\u0447\u0435\u0442\u043d\u0430">{IC["back"]}Home</a>'
       '<h1 data-en="Location" data-mk="\u041b\u043e\u043a\u0430\u0446\u0438\u0458\u0430">Location</h1></div></section>'
@@ -301,10 +353,30 @@ def W(name,content):
 
 W("index.html",home_page())
 W("lokacija.html",location_page())
-W("standard menu.html",hub_page("Standard Menu","\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0434\u043d\u043e \u041c\u0435\u043d\u0438","The full menu","\u0426\u0435\u043b\u043e\u0442\u043e \u043c\u0435\u043d\u0438","standard",STD_CATS))
-W("Drinks.html",hub_page("Drinks","\u041f\u0438\u0458\u0430\u043b\u043e\u0446\u0438","From the bar","\u041e\u0434 \u0431\u0430\u0440\u043e\u0442","drinks",DRK_CATS))
-W("fasting-menu.html",menu_page("Fasting Menu","\u041f\u043e\u0441\u043d\u043e \u041c\u0435\u043d\u0438",parse_fasting(read("fasting-menu.html")),("index.html",("Home","\u041f\u043e\u0447\u0435\u0442\u043d\u0430")),"fasting","Vegan & lenten dishes.","\u041f\u043e\u0441\u043d\u0438 \u0458\u0430\u0434\u0435\u045a\u0430."))
+W("standard menu.html",hub_page("standard menu.html",
+   "The full Bakardi menu in Ki\u010devo: breakfast, salads, pizza & pastrmajlija, pasta, grilled specials, sandwiches, daska boards and desserts. Prices in denars.",
+   "Standard Menu","\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0434\u043d\u043e \u041c\u0435\u043d\u0438","standard",STD_CATS))
+W("Drinks.html",hub_page("Drinks.html",
+   "Drinks at Bakardi lounge bar, Ki\u010devo: coffee and tea, draft & bottled beer, wine, rakija, spirits and soft drinks.",
+   "Drinks","\u041f\u0438\u0458\u0430\u043b\u043e\u0446\u0438","drinks",DRK_CATS))
+W("fasting-menu.html",menu_page("fasting-menu.html",
+   "Fasting (posno) and vegan dishes at Bakardi, Ki\u010devo \u2014 fasting breakfast, pizza, pasta, salads, furnarinki and more.",
+   "Fasting Menu","\u041f\u043e\u0441\u043d\u043e \u041c\u0435\u043d\u0438",parse_fasting(read("fasting-menu.html")),("index.html",("Home","\u041f\u043e\u0447\u0435\u0442\u043d\u0430")),"fasting","Vegan & lenten dishes.","\u041f\u043e\u0441\u043d\u0438 \u0458\u0430\u0434\u0435\u045a\u0430."))
 for file,ten,tmk,parent,active in CAT_PAGES:
-    W(file,menu_page(ten,tmk,parse_standard(read(file)),parent,active))
+    desc=f"{ten} at Bakardi restaurant & lounge bar, Ki\u010devo \u2014 see the items and prices. Order for delivery or pick-up."
+    W(file,menu_page(file,desc,ten,tmk,parse_standard(read(file)),parent,active))
 
-print("Built",len([f for f in os.listdir(OUT) if f.endswith('.html')]),"pages")
+# ---- sitemap.xml + robots.txt ----
+PAGES_FOR_SITEMAP = (
+  [("index.html","1.0"),("standard menu.html","0.9"),("Drinks.html","0.9"),
+   ("fasting-menu.html","0.8"),("lokacija.html","0.7")]
+  + [(f[0],"0.7") for f in CAT_PAGES])
+LASTMOD="2026-07-10"
+urls="".join(
+  f'  <url><loc>{BASE}{quote(f)}</loc><lastmod>{LASTMOD}</lastmod><priority>{pr}</priority></url>\n'
+  for f,pr in PAGES_FOR_SITEMAP)
+W("sitemap.xml",'<?xml version="1.0" encoding="UTF-8"?>\n'
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls+'</urlset>\n')
+W("robots.txt","User-agent: *\nAllow: /\n\nSitemap: "+BASE+"sitemap.xml\n")
+
+print("Built",len([f for f in os.listdir(OUT) if f.endswith('.html')]),"pages + sitemap.xml + robots.txt")

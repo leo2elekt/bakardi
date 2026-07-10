@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
-        <loc>https://bakardi.mk/</loc>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://bakardi.mk/menu</loc>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://bakardi.mk/fasting-menu</loc>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://bakardi.mk/drinks</loc>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://bakardi.mk/location</loc>
-        <priority>0.8</priority>
-    </url>
-
+  <url><loc>https://bakardi.mk/index.html</loc><lastmod>2026-07-10</lastmod><priority>1.0</priority></url>
+  <url><loc>https://bakardi.mk/standard%20menu.html</loc><lastmod>2026-07-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://bakardi.mk/Drinks.html</loc><lastmod>2026-07-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://bakardi.mk/fasting-menu.html</loc><lastmod>2026-07-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://bakardi.mk/lokacija.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/new.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/breakfast.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/salads.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/starters.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/furnarinki.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/pizza.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/cheese.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/pasta.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/panzerotti.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/specials.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/daska.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/sandwich.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/rollS.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/extras.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/desserts.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/hotbev.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/nonAlc.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/beer.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/wine.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bakardi.mk/alcohol.html</loc><lastmod>2026-07-10</lastmod><priority>0.7</priority></url>
 </urlset>
